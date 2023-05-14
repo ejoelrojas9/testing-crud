@@ -16,10 +16,6 @@
           <div class="block">
             <table class="table">
               <tr>
-                <th>User:</th>
-                <td><%= @store.user -%></td>
-              </td>
-              <tr>
                 <th>Article: </th>
                 <td><%= @store.article -%></td>
               </tr>
@@ -38,6 +34,14 @@
               <tr>
                 <th>On Counter:</th>
                 <td><%= @store.on_counter -%></td>
+              </tr>
+              <tr>
+                <th>Create at:</th>
+                <td><%= @store.created_at -%></td>
+              </tr>
+              <tr>
+                <th>Update at:</th>
+                <td><%= @store.updated_at -%></td>
               </tr>
               <tr>
                 <td></td>

@@ -15,7 +15,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_13_193453) do
   enable_extension "plpgsql"
 
   create_table "stores", force: :cascade do |t|
-    t.string "user"
     t.string "article"
     t.string "state"
     t.integer "in_warehouse"
