@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="content-header">
+    <div class="header-section">
+      <h1><small>Check this article details</small></h1>
+      <%= link_to "Edit", edit_store_path(@store.id), class: 'btn btn-info' %>
+    </div>
+  </div>
+  <ul class="breadcrumb breadcrumb-top">
+    <li><a href="<%= stores_path %>">Home</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="row">
+      <br>
+      <div class="col-md-4"></div>
+        <div class="row form-control">
+          <div class="block">
+            <table class="table">
+              <tr>
+                <th>User:</th>
+                <td><%= @store.user -%></td>
+              </td>
+              <tr>
+                <th>Article: </th>
+                <td><%= @store.article -%></td>
+              </tr>
+              <tr>
+                <th>State:</th>
+                <td><%= @store.state -%></td>
+              </tr>
+              <tr>
+                <th>Price:</th>
+                <td><%= @store.price -%></td>
+              </tr>
+              <tr>
+                <th>In Warehouse:</th>
+                <td><%= @store.in_warehouse -%></td>
+              </tr>
+              <tr>
+                <th>On Counter:</th>
+                <td><%= @store.on_counter -%></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2"><%= link_to "Delete", store_path(@store), class: 'btn btn-danger', data: { 
+                  turbo_method: :delete,
+                  turbo_confirm: 'Are you sure to DELETE this article?'
+                  } %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+		</div>
+  </div>
+</div>

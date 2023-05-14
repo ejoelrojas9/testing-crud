@@ -80,6 +80,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     builder (3.2.4)
+    byebug (11.1.3)
     capybara (3.39.1)
       addressable
       matrix
@@ -226,6 +227,7 @@ DEPENDENCIES
   bootsnap
   bootstrap-daterangepicker-rails
   bootstrap-sass
+  byebug
   capybara
   debug
   importmap-rails

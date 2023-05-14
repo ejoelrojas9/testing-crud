@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="content-header">
+    <div class="header-section">
+      <h1><small>Edit article to the store</small></h1>
+    </div>
+  </div>
+  <ul class="breadcrumb breadcrumb-top">
+  <li><a href="<%= stores_path %>">Home</a></li>
+  </ul>
+  <section>
+    <%= form_with model: @store do |f| -%>
+      <div class="modal-header">
+      <h3 class="modal-title">Article form</h3>
+    </div>
+    <div class="modal-body">
+      <div class="alert alert-danger" style="display: none" id="record-errors"></div>
+			<div class="row">
+				<div class="row">
+          <div class="col-sm-6">
+            <td><%= f.label :user -%> *</td>
+            <td><%= f.text_field :user, required: true, class: 'form-control' -%></td>
+          </div>
+          <div class="col-sm-6">
+            <td><%= f.label :article -%> *</td>
+            <td><%= f.text_field :article, required: true, class: 'form-control' -%></td>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <td><%= f.label :state -%> *</td>
+            <td><%= f.text_field :state, required: true, class: 'form-control' -%></td>
+          </div>
+          <div class="col-sm-6">
+            <td><%= f.label :price -%> *</td>
+            <td><%= f.text_field :price, required: true, class: 'form-control' -%></td>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <td><%= f.label :in_warehouse -%> *</td>
+            <td><%= f.text_field :in_warehouse, required: true, class: 'form-control' -%></td>
+          </div>
+          <div class="col-sm-6">
+            <td><%= f.label :on_counter -%> *</td>
+            <td><%= f.text_field :on_counter, required: true, class: 'form-control' -%></td>
+          </div>
+        </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8"></div>
+				<div class="col-sm-3 ">
+					<%= link_to "Close", stores_path, class: 'btn btn-secondary' %>
+					<button type="submit" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+    <% end %>
+  </section>
+</div>
