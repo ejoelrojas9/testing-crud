@@ -72,8 +72,13 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'byebug'
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'byebug'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
 end
