@@ -1,3 +1,33 @@
-<div>
-  <h1>Store Home</h1>
+<div class="container">
+  <div class="content-header">
+    <div class="header-section">
+      <h1><small>Access the information of the store</small></h1>
+      <%= link_to "Add Article", new_store_path(@store), class: 'btn btn-success' %>
+    </div>
+  </div>
+  <ul class="breadcrumb breadcrumb-top">
+    <li><a href="<%= stores_path %>">Home</a></li>
+  </ul>
+  <div class="block full block-alt-noborder table-responsive form-control">
+    <table class="table data-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Article</th>
+          <th>State</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @stores.each do |store| %>
+          <tr>
+            <td><%= store.id %></td>
+            <td><a href="<%= store_path(store.id) %>" ><%= store.article %></a></td>
+            <td><%= store.state %></td>
+            <td><%= store.price %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
