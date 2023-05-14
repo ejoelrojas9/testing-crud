@@ -32,6 +32,7 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
   config.include FactoryBot::Syntax::Methods
 
   # Custom helper json_response
@@ -68,8 +69,6 @@ RSpec.configure do |config|
   config.before(:each) do
     ActiveJob::Base.queue_adapter = :test
   end
-  
-  config.use_transactional_fixtures = true
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
@@ -93,5 +92,5 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-  config.include Devise::Test::ControllerHelpers, type: :controller
+  # config.include Devise::Test::ControllerHelpers, type: :controller
 end
